@@ -2,15 +2,13 @@ This cheat sheet provides a quick reference guide to common Terraform commands a
 
 # 1.terraform init:
 
-   - Initializes a working directory containing Terraform configuration files.
+Initializes a working directory containing Terraform configuration files.
 
-
-  
-2. **terraform plan:**
+2. terraform plan:
    - Generates an execution plan, outlining actions Terraform will take.
-   ```
+
    terraform plan
-   ```
+
 
 3. **terraform apply:**
    - Applies the changes described in the Terraform configuration.
