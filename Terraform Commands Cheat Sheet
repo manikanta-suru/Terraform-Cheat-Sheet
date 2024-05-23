@@ -1,0 +1,215 @@
+This cheat sheet provides a quick reference guide to common Terraform commands along with their descriptions and examples.
+
+1. **terraform init:**
+   - Initializes a working directory containing Terraform configuration files.
+   ```
+   terraform init
+   ```
+
+2. **terraform plan:**
+   - Generates an execution plan, outlining actions Terraform will take.
+   ```
+   terraform plan
+   ```
+
+3. **terraform apply:**
+   - Applies the changes described in the Terraform configuration.
+   ```
+   terraform apply
+   ```
+
+4. **terraform destroy:**
+   - Destroys all resources described in the Terraform configuration.
+   ```
+   terraform destroy
+   ```
+
+5. **terraform validate:**
+   - Checks the syntax and validity of Terraform configuration files.
+   ```
+   terraform validate
+   ```
+
+6. **terraform refresh:**
+   - Updates the state file against real resources in the provider.
+   ```
+   terraform refresh
+   ```
+
+7. **terraform output:**
+   - Displays the output values from the Terraform state.
+   ```
+   terraform output
+   ```
+
+8. **terraform state list:**
+   - Lists resources within the Terraform state.
+   ```
+   terraform state list
+   ```
+
+9. **terraform show:**
+   - Displays a human-readable output of the current state or a specific resource’s state.
+   ```
+   terraform show
+   ```
+
+10. **terraform import:**
+    - Imports existing infrastructure into Terraform state.
+    ```
+    terraform import aws_instance.example i-1234567890abcdef0
+    ```
+
+11. **terraform fmt:**
+    - Rewrites Terraform configuration files to a canonical format.
+    ```
+    terraform fmt
+    ```
+
+12. **terraform graph:**
+    - Generates a visual representation of the Terraform dependency graph.
+    ```
+    terraform graph | dot -Tsvg > graph.svg
+    ```
+
+13. **terraform providers:**
+    - Prints a tree of the providers used in the configuration.
+    ```
+    terraform providers
+    ```
+
+14. **terraform workspace list:**
+    - Lists available workspaces.
+    ```
+    terraform workspace list
+    ```
+
+15. **terraform workspace select:**
+    - Switches to another existing workspace.
+    ```
+    terraform workspace select dev
+    ```
+
+16. **terraform workspace new:**
+    - Creates a new workspace.
+    ```
+    terraform workspace new staging
+    ```
+
+17. **terraform workspace delete:**
+    - Deletes an existing workspace.
+    ```
+    terraform workspace delete staging
+    ```
+
+18. **terraform output:**
+    - Retrieves output values from a module.
+    ```
+    terraform output example_output
+    ```
+
+19. **terraform state mv:**
+    - Moves an item in the state.
+    ```
+    terraform state mv aws_instance.example aws_instance.new_example
+    ```
+
+20. **terraform state pull:**
+    - Pulls the state from a remote backend.
+    ```
+    terraform state pull
+    ```
+
+21. **terraform state push:**
+    - Pushes the state to a remote backend.
+    ```
+    terraform state push
+    ```
+
+22. **terraform state rm:**
+    - Removes items from the state.
+    ```
+    terraform state rm aws_instance.example
+    ```
+
+23. **terraform taint:**
+    - Manually marks a resource for recreation.
+    ```
+    terraform taint aws_instance.example
+    ```
+
+24. **terraform untaint:**
+    - Removes the ‘tainted’ state from a resource.
+    ```
+    terraform untaint aws_instance.example
+    ```
+
+25. **terraform login:**
+    - Saves credentials for Terraform Cloud.
+    ```
+    terraform login
+    ```
+
+26. **terraform logout:**
+    - Removes credentials for Terraform Cloud.
+    ```
+    terraform logout
+    ```
+
+27. **terraform force -unlock:**
+    - Releases a locked state.
+    ```
+    terraform force-unlock LOCK_ID
+    ```
+
+28. **terraform import:**
+    - Imports existing infrastructure into your Terraform state.
+    ```
+    terraform import aws_instance.example i-1234567890abcdef0
+    ```
+
+29. **terraform plan -out:**
+    - Saves the generated plan to a file.
+    ```
+    terraform plan -out=tfplan
+    ```
+
+30. **terraform apply -auto-approve:**
+    - Automatically applies changes without requiring approval.
+    ```
+    terraform apply -auto-approve
+    ```
+
+31. **terraform apply -target=resource:**
+    - Applies changes only to a specific resource.
+    ```
+    terraform apply -target=aws_instance.example
+    ```
+
+32. **terraform destroy -target=resource:**
+    - Destroys a specific resource.
+    ```
+    terraform destroy -target=aws_instance.example
+    ```
+
+33. **terraform apply -var="key=value":**
+    - Sets a variable’s value directly in the command line.
+    ```
+    terraform apply -var="region=us-west-1"
+    ```
+
+34. **terraform apply -var-file=filename.tfvars:**
+    - Specifies a file containing variable definitions.
+    ```
+    terraform apply -var-file=terraform.tfvars
+    ```
+
+35. **terraform apply -var-file=filename.auto.tfvars:**
+    - Automatically loads variables from a file.
+    ```
+    terraform apply -var-file=terraform.auto.tfvars
+    ```
+
+---
+
+Feel free to modify the descriptions or examples to suit your needs. If you have any further questions or need additional information, don't hesitate to ask!
